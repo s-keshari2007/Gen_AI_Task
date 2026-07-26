@@ -27,8 +27,8 @@
    * The bot doesn't forget — if a judge mentions their name or an insult in Question 1, the bot will call them out on it 3 questions later!
    * Built-in **Memory Context Inspector** UI accordion lets judges see the exact context window stored in real-time.
 
-3. **Live Interactive Stage UI (Streamlit):**
-   * Dark mode stage aesthetic with neon highlights, judge impression meters, and curveball trigger buttons.
+3. **Dual Execution Mode (Web UI & Terminal CLI):**
+   * Can be launched as a rich **Streamlit Web Stage UI** OR run directly in the **Terminal CLI**.
 
 4. **Multi-LLM Engine & Instant Out-of-the-Box Demo:**
    * Works out-of-the-box in **Demo Mode** without needing any API keys.
@@ -36,7 +36,7 @@
 
 ---
 
-## 🛠️ How to Run the Act Locally
+## 🛠️ How to Run the Act
 
 ### Prerequisites
 Make sure you have Python 3.9+ installed.
@@ -47,26 +47,24 @@ cd Gen_AI
 pip install -r requirements.txt
 ```
 
-### 2. Launch the Stage (Streamlit)
+### 2. Option A: Run via Web UI (Streamlit)
 ```bash
 streamlit run app.py
 ```
+Open [http://localhost:8501](http://localhost:8501) in your browser.
 
-### 3. (Optional) Set API Key for Real LLM Models
-You can either enter your API key in the **Sidebar Panel** of the web UI or export it in your environment:
+### 3. Option B: Run via Terminal CLI (No Browser Needed!)
 ```bash
-# Example for Groq
-export GROQ_API_KEY="your_groq_api_key"
-
-# Example for Gemini
-export GOOGLE_API_KEY="your_gemini_api_key"
+python cli_main.py
 ```
+Talk to the bot directly in your command line window!
 
 ---
 
 ## 📂 Codebase Structure
 
 * `app.py` — Main Streamlit web application & India's Got Latent stage UI.
+* `cli_main.py` — Terminal CLI interface for running the chatbot directly in command line.
 * `chatbot_engine.py` — LangChain memory buffer manager and multi-provider LLM connector.
 * `personas.py` — Definitions, system prompts, avatars, and character traits for all 6 personas.
 * `requirements.txt` — Required Python packages.
