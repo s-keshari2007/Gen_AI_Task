@@ -1,0 +1,15 @@
+# Ignore sensitive keys and secrets
+.env
+
+# Ignore Python cached files
+__pycache__/
+*.pyc
+
+# Ignore virtual environments
+.venv/
+venv/
+env/
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
